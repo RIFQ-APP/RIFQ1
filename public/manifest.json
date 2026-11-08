@@ -1,0 +1,11 @@
+{
+  "name": "رِفْق | RIFQ",
+  "short_name": "رِفْق",
+  "description": "منصة إسلامية متكاملة للقرآن والحفظ والفهم",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#1e4d2b",
+  "lang": "ar",
+  "dir": "rtl"
+}

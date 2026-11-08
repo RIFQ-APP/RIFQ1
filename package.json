@@ -1,0 +1,38 @@
+{
+  "name": "rifq",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node -e \"if(!process.env.DATABASE_URL){console.error('MISSING DATABASE_URL');process.exit(1)}\" && prisma generate && next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.16.0",
+    "bcryptjs": "2.4.3",
+    "clsx": "2.1.1",
+    "jose": "5.9.6",
+    "next": "15.5.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tailwind-merge": "2.5.4",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "20.17.0",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "eslint": "9.17.0",
+    "eslint-config-next": "15.5.7",
+    "prisma": "6.16.0",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.2",
+    "postcss": "8.4.49",
+    "autoprefixer": "10.4.20"
+  }
+}
