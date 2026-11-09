@@ -475,7 +475,7 @@ export default function SurahReader({
                 >
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       openTafsir(ayah.numberInSurah);
@@ -485,7 +485,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleAyahChange(ayah.numberInSurah);
@@ -495,7 +495,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleFavorite(ayah.numberInSurah);
@@ -505,7 +505,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       const ok = addLocalBookmark(surahNumber, ayah.numberInSurah);
@@ -516,7 +516,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       copyAyah(ayah.text, ayah.numberInSurah);
@@ -537,7 +537,7 @@ export default function SurahReader({
             
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       openTafsir(currentAyah);
@@ -547,7 +547,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleAyahChange(currentAyah);
@@ -557,7 +557,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleFavorite(currentAyah);
@@ -567,7 +567,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       const ok = addLocalBookmark(surahNumber, currentAyah);
@@ -578,7 +578,7 @@ export default function SurahReader({
                   </button>
                   <button
                     type="button"
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary hover:bg-primary hover:text-primary-foreground transition-soft"
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-soft"
                     onClick={(e) => {
                       e.stopPropagation();
                       copyAyah((displayAyahs.find((x) => x.numberInSurah === currentAyah)?.text ?? ""), currentAyah);
