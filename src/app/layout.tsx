@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo, Amiri } from "next/font/google";
 import "./globals.css";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -71,6 +72,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cairo.variable} ${amiri.variable} font-sans antialiased min-h-screen flex flex-col bg-background text-foreground`}>
+        <ServiceWorkerRegistration />
         {children}
       </body>
     </html>
