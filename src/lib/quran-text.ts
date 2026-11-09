@@ -25,12 +25,22 @@ export function stripBismillah(
   if (numberInSurah !== 1 || surahNumber === 1 || surahNumber === 9) return text;
 
   const tokens = text.trim().split(/\s+/);
-  if (tokens.length <= BASMALA.length) return text;
+  const expected = BASMALA.join("");
+  let consumed = 0;
+  let normalizedPrefix = "";
 
-  const head = tokens.slice(0, BASMALA.length).map(normalizeArabic);
-  if (!BASMALA.every((word, index) => head[index] === word)) return text;
+  // بعض مصادر المصحف تستخدم اختلافات في رسم الألف أو علامات قرآنية
+  // أو تدمج علامات الوقف مع الكلمات؛ لذلك نقارن البسملة بعد تطبيعها
+  // دون الاعتماد على تطابق كل كلمة بصورة حرفية.
+  while (consumed < tokens.length && normalizedPrefix.length < expected.length) {
+    const normalizedToken = normalizeArabic(tokens[consumed]).replace(/[^\\u0621-\\u064A]/g, "");
+    if (normalizedToken) normalizedPrefix += normalizedToken;
+    consumed += 1;
+    if (!expected.startsWith(normalizedPrefix)) return text;
+  }
 
-  return tokens.slice(BASMALA.length).join(" ").trim();
+  if (normalizedPrefix !== expected) return text;
+  return tokens.slice(consumed).join(" ").trim();
 }
 
 /** أرقام عربية-هندية لعلامة نهاية الآية */
